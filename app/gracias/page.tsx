@@ -1,0 +1,8 @@
+import { Camera as Instagram, Check } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+export default async function Gracias({ searchParams }: { searchParams: Promise<{ orden?: string; ath?: string }> }) {
+  const { orden, ath } = await searchParams;
+  return <main className="grid min-h-screen place-items-center bg-[#eafbfb] px-4"><section className="w-full max-w-xl rounded-[2rem] bg-white p-8 text-center shadow-[0_30px_90px_rgba(17,24,39,.12)] sm:p-12"><img src="/medutura-symbol-v3.png" alt="" className="mx-auto h-24 w-24" /><span className="mx-auto mt-4 grid h-14 w-14 place-items-center rounded-full bg-[#111827] text-[#80e3e0]"><Check /></span><h1 className="brand-word mt-6 text-4xl font-black">¡Gracias por apoyar lo hecho a mano!</h1><p className="mt-4 text-lg text-slate-600">Recibimos tu orden <strong>{orden || ""}</strong>. Te enviaremos los próximos pasos por correo.</p>{ath && <div className="mt-6 rounded-2xl bg-[#dffafa] p-5 text-left"><p className="font-bold text-[#0f6f74]">Pago por ATH Móvil</p><p className="mt-1 text-sm text-slate-600">Envía el total a <strong>{ath}</strong> e incluye tu número de orden en el mensaje. La pieza se confirma cuando recibamos el pago.</p></div>}<div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center"><Button asChild className="h-11 rounded-full bg-[#111827] px-6"><Link href="/">Volver a la tienda</Link></Button><Button asChild variant="outline" className="h-11 rounded-full px-6"><a href="https://www.instagram.com/medutura/" target="_blank" rel="noreferrer"><Instagram /> Escríbenos</a></Button></div></section></main>;
+}
