@@ -72,7 +72,7 @@ export async function POST(request: Request) {
       return Response.json({ error: "Hay un producto o cantidad inválida en el carrito." }, { status: 400 });
     }
 
-    // Delivery is quoted by Annelys after the order based on the customer's location.
+    // Delivery is quoted after the order based on the customer's location.
     // Online checkout charges the products only; pickup is available in the Metro Area.
     const shippingCents = 0;
     const configuredTaxRate = Number(process.env.SALES_TAX_RATE || 0);
