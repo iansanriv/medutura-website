@@ -173,7 +173,7 @@ ATH Móvil funciona como pago manual: la clienta recibe el usuario y su número 
 
 ## 12. Entrega e impuesto
 
-La entrega se cotiza y se cobra por separado según la ubicación de la clienta. El checkout cobra los productos y el impuesto configurado; el recogido se coordina en el Área Metro.
+La entrega se cotiza y se cobra por separado según la ubicación de la clienta. El checkout cobra los productos y el impuesto configurado; el recogido se coordina en el Área Metro de Puerto Rico.
 
 La tasa de impuesto se expresa como decimal:
 
