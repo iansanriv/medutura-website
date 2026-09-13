@@ -171,16 +171,17 @@ ATH_MOVIL_BUSINESS=/usuario-del-negocio
 
 ATH Móvil funciona como pago manual: la clienta recibe el usuario y su número de orden. La dueña confirma el pago desde `/admin`.
 
-## 12. Envío e impuesto
+## 12. Entrega e impuesto
 
-Los valores se expresan en centavos y como tasa decimal:
+La entrega se cotiza y se cobra por separado según la ubicación de la clienta. El checkout cobra los productos y el impuesto configurado; el recogido se coordina en el Área Metro.
+
+La tasa de impuesto se expresa como decimal:
 
 ```env
-SHIPPING_FLAT_RATE_CENTS=0
 SALES_TAX_RATE=0
 ```
 
-Ejemplos: `500` representa $5.00 y `0.115` representa 11.5%. Confirma las obligaciones fiscales y el costo real de envío antes de cambiar estos valores.
+Ejemplo: `0.115` representa 11.5%. Confirma las obligaciones fiscales antes de cambiar este valor.
 
 ## 13. Emails opcionales
 

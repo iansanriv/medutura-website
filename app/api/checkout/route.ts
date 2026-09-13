@@ -72,10 +72,9 @@ export async function POST(request: Request) {
       return Response.json({ error: "Hay un producto o cantidad inválida en el carrito." }, { status: 400 });
     }
 
-    const configuredShipping = Number(process.env.SHIPPING_FLAT_RATE_CENTS || 0);
-    const shippingCents = deliveryMethod === "shipping" && Number.isFinite(configuredShipping)
-      ? Math.max(0, Math.floor(configuredShipping))
-      : 0;
+    // Delivery is quoted by Annelys after the order based on the customer's location.
+    // Online checkout charges the products only; pickup is available in the Metro Area.
+    const shippingCents = 0;
     const configuredTaxRate = Number(process.env.SALES_TAX_RATE || 0);
     const taxRate = Number.isFinite(configuredTaxRate) ? Math.max(0, Math.min(1, configuredTaxRate)) : 0;
     createdOrder = await supabaseRpc<CreatedOrder>("create_store_order", {
