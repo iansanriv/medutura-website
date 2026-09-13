@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Medutura | Accesorios confeccionados en series pequeñas",
-  description: "Accesorios confeccionados en el Área Metro de Puerto Rico, con entregas coordinadas según la ubicación.",
+  title: "Medutura | Bolsos y accesorios textiles",
+  description: "Bolsos, accesorios y piezas textiles con entregas coordinadas según la ubicación.",
   icons: {
     icon: "/medutura-symbol-v3.png",
     shortcut: "/medutura-symbol-v3.png",
